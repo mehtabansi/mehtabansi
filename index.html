@@ -1,206 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bansi Mehta - Business & Marketing Analyst</title>
-<style>
-  :root {
-    --background: #06141b;
-    --background-gradient: linear-gradient(135deg, #06141b 0%, #11212d 100%);
-    --card-bg: #253745;
-    --card-bg-hover: #3a4e63;
-    --text-color: #ccd0cf;
-    --accent-color: #ff52a0;
-    --header-color: #9ba8ab;
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--background-gradient);
-    color: var(--text-color);
-  }
-
-  nav {
-    background-color: var(--card-bg);
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-  }
-
-  nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  nav a:hover {
-    color: var(--accent-color);
-  }
-
-  header {
-    text-align: center;
-    padding: 6rem 2rem 4rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.2rem;
-    font-weight: 900;
-  }
-
-  header h2 {
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: 1.5rem;
-  }
-
-  main {
-    max-width: 900px;
-    margin: 2rem auto 4rem;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  section {
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 0 15px rgba(255,82,160,0.3);
-  }
-
-  section:hover {
-    background-color: var(--card-bg-hover);
-  }
-
-  section h3 {
-    margin-bottom: 1rem;
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-  }
-
-  p, ul {
-    line-height: 1.5;
-  }
-
-  ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-  }
-
-  .skill-bar {
-    height: 12px;
-    background: var(--background);
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-  }
-
-  .skill-level {
-    height: 100%;
-    background: var(--accent-color);
-    border-radius: 6px 0 0 6px;
-  }
-
-  footer {
-    max-width: 900px;
-    margin: 0 auto 2rem;
-    text-align: center;
-    color: var(--header-color);
-    font-size: 0.9rem;
-  }
-
-  @media screen and (max-width: 480px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bansi Mehta - Business & Marketing Analyst</title>
+  <style>
+    :root {
+      --color-1: #06141B;
+      --color-2: #11212D;
+      --color-3: #253745;
+      --color-4: #4A5C6A;
+      --color-5: #9BA8AB;
+      --color-6: #CCD0CF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--color-1) 0%, var(--color-2) 100%);
+      color: var(--color-6);
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
     nav {
-      gap: 1rem;
-      padding: 1rem;
+      background: var(--color-3);
+      position: fixed;
+      width: 100%;
+      padding: 1rem 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 20;
+      box-shadow: 0 2px 12px 0 rgba(6,20,27,0.1);
+    }
+    nav a {
+      color: var(--color-5);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.08rem;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+      padding: 0.2rem 0.8rem;
+      border-radius: 8px;
+    }
+    nav a:hover, nav a.active {
+      color: var(--color-6);
+      background: var(--color-4);
+    }
+    header {
+      text-align: center;
+      padding: 7rem 2rem 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 2.7rem;
+      font-weight: 800;
+      color: var(--color-6);
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
     }
     header h2 {
-      font-size: 1.2rem;
+      color: var(--color-5);
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
     }
-  }
-</style>
+    header .cta {
+      background: var(--color-4);
+      color: var(--color-6);
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.7rem 2rem;
+      border-radius: 24px;
+      letter-spacing: 1px;
+      margin-top: 1.3rem;
+      box-shadow: 0 3px 16px 0 rgba(6,20,27,0.07);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    header .cta:hover {
+      background: var(--color-6);
+      color: var(--color-1);
+      transform: scale(1.06);
+    }
+    main {
+      margin: 2rem auto 4rem auto;
+      max-width: 1050px;
+      padding: 0 1rem;
+    }
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    section {
+      background: var(--color-3);
+      border-radius: 14px;
+      box-shadow: 0 5px 32px 0 rgba(39,58,74,0.12);
+      padding: 2rem 2rem 2.2rem 2rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s, background 0.2s;
+    }
+    section:hover {
+      box-shadow: 0 6px 54px 0 rgba(74,92,106,0.20);
+      background: var(--color-4);
+    }
+    section h3 {
+      color: var(--color-5);
+      margin-bottom: 1.2rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--color-6);
+      padding-bottom: 0.5rem;
+    }
+    .skills-list, .services-list {
+      display: grid;
+      gap: 0.6rem;
+      grid-template-columns: 1fr;
+    }
+    .skill-bar-bg {
+      background: var(--color-4);
+      border-radius: 8px;
+      height: 11px;
+      margin-bottom: 0.4rem;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      background: var(--color-6);
+      border-radius: 8px 0 0 8px;
+      height: 100%;
+      transition: width 0.4s;
+    }
+    .project-card, .service-card {
+      background: var(--color-2);
+      border-radius: 10px;
+      margin: 1rem 0;
+      padding: 1rem 1.3rem;
+      box-shadow: 0 1px 8px 0 rgba(37,55,69,0.13);
+    }
+    .project-card h4, .service-card h4 {
+      color: var(--color-6);
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+    .project-card p, .service-card p {
+      font-size: 0.97rem;
+      color: var(--color-5);
+    }
+    a.link-btn {
+      display: inline-block;
+      margin-top: 1.1rem;
+      background: var(--color-6);
+      color: var(--color-1);
+      font-weight: 700;
+      padding: 0.6rem 1.6rem;
+      border-radius: 20px;
+      text-decoration: none;
+      letter-spacing: 0.6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    a.link-btn:hover {
+      background: var(--color-5);
+      color: var(--color-1);
+    }
+    .testimonial {
+      color: var(--color-6);
+      background: var(--color-4);
+      border-radius: 10px;
+      font-size: 1.06rem;
+      font-style: italic;
+      padding: 1rem;
+      margin-top: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+    .contact-section a {
+      color: var(--color-6);
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 1rem;
+      transition: color 0.2s;
+    }
+    .contact-section a:hover {
+      color: var(--color-5);
+    }
+    footer {
+      text-align: center;
+      color: var(--color-5);
+      padding: 2.2rem 1rem 1.2rem 1rem;
+      font-size: 0.96rem;
+      background: var(--color-2);
+      border-radius: 12px 12px 0 0;
+      max-width: 900px;
+      margin: 2rem auto 0 auto;
+    }
+    @media (max-width: 650px) {
+      header { padding-top: 5.5rem; }
+      .grid-cards { grid-template-columns: 1fr; }
+      section { padding: 1.1rem 0.7rem 1.4rem 0.7rem;}
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-  <a href="#landing">Home</a>
-  <a href="#about">About Me</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#blog">Blog</a>
-  <a href="#testimonials">Testimonials</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <nav>
+    <a href="#landing">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<header id="landing">
-  <h1>Bansi Mehta</h1>
-  <h2>Business & Marketing Analyst</h2>
-</header>
+  <header id="landing">
+    <h1>Bansi Mehta</h1>
+    <h2>Business & Marketing Analyst</h2>
+    <button class="cta" onclick="window.location='#contact'">Let's Connect</button>
+  </header>
 
-<main>
-  <section id="about">
-    <h3>About Me</h3>
-    <p>Experienced analyst with a passion for transforming data into strategic business insights. Skilled in market research, data visualization, and decision support.</p>
-  </section>
+  <main>
+    <div class="grid-cards">
+      <section id="about">
+        <h3>About Me</h3>
+        <p>
+          Experienced analyst specializing in transforming complex data into actionable insights for business and marketing growth. Proficient in market research, presentation, dashboarding, and reporting for data-driven organizations.
+        </p>
+        <a class="link-btn" href="Resume_BansiMehta.pdf" target="_blank">Download CV</a>
+      </section>
 
-  <section id="projects">
-    <h3>Projects</h3>
-    <p>Featured projects include market segmentation analysis, business intelligence dashboards, and customer behavior analytics.</p>
-  </section>
-
-  <section id="skills">
-    <h3>Skills</h3>
-    <div>
-      <div>Data Analysis</div>
-      <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
-      
-      <div>Market Research</div>
-      <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
-      
-      <div>Excel & Power BI</div>
-      <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
-      
-      <div>Python & SQL</div>
-      <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+      <section id="projects">
+        <h3>Selected Projects</h3>
+        <div class="project-card">
+          <h4>Customer Segmentation Dashboard</h4>
+          <p>Built a Power BI dashboard for customer profiling and marketing segmentation, resulting in a 20% improvement in campaign targeting.</p>
+        </div>
+        <div class="project-card">
+          <h4>Business Reporting Automation</h4>
+          <p>Developed automated Excel/SQL and Airflow pipelines, reducing manual reporting effort by 50% and saving teams dozens of work hours.</p>
+        </div>
+      </section>
     </div>
-  </section>
 
-  <section id="blog">
-    <h3>Blog</h3>
-    <p>Insights on data-driven business strategies and营销分析趋势.</p>
-  </section>
+    <div class="grid-cards">
+      <section id="skills">
+        <h3>Skills</h3>
+        <div>
+          <div>Business Data Analysis</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:94%"></div></div>
+          <div>Market Research & Visualization</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div>
+          <div>SQL, Python for Analytics</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+          <div>Power BI & Excel</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div>
+          <div>Team Collaboration</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:87%"></div></div>
+        </div>
+      </section>
 
-  <section id="testimonials">
-    <h3>Testimonials</h3>
-    <p>"Bansi’s market analysis helped increase our customer base by 25% in 6 months." – Manager</p>
-  </section>
+      <section id="services">
+        <h3>Services</h3>
+        <div class="service-card">
+          <h4>Business Reporting Automation</h4>
+          <p>Automate your business data flows and reports with custom, reliable dashboards.</p>
+        </div>
+        <div class="service-card">
+          <h4>Advanced Market Research</h4>
+          <p>Discover trends and target customers using data-driven insights for growth.</p>
+        </div>
+        <div class="service-card">
+          <h4>Strategy & Dashboarding</h4>
+          <p>Transform your executive, sales, or marketing data into compelling and actionable dashboards.</p>
+        </div>
+      </section>
+    </div>
 
-  <section id="contact">
-    <h3>Contact</h3>
-    <p>Email: <a href="mailto:bansi.email@example.com" style="color: var(--accent-color)">bansi.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/bansimehta13" style="color: var(--accent-color)" target="_blank">bansimehta13</a></p>
-  </section>
-</main>
+    <div class="grid-cards">
+      <section id="testimonials">
+        <h3>Testimonials</h3>
+        <div class="testimonial">
+          "Bansi’s data analysis made our yearly marketing campaigns much smarter and far more successful." – Marketing Director
+        </div>
+        <div class="testimonial">
+          "Her dashboards were transformative for our reporting process." – Business Manager
+        </div>
+      </section>
 
-<footer>
-  &copy; 2025 Bansi Mehta. All rights reserved.
-</footer>
+      <section id="contact" class="contact-section">
+        <h3>Contact</h3>
+        <p>Let's connect for collaborations or opportunities!</p>
+        <a href="mailto:bansi@email.com">Email</a>
+        <a href="https://linkedin.com/in/bansimehta13" target="_blank">LinkedIn</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Bansi Mehta — All rights reserved.
+  </footer>
 
 </body>
 </html>
