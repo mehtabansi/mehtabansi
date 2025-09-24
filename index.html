@@ -1,158 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name - Portfolio</title>
-  <style>
-    :root {
-      --color-dark: #190019;
-      --color-primary: #2B124C;
-      --color-secondary: #522B5B;
-      --color-accent: #854F6C;
-      --color-bg-light: #DFB6B2;
-      --color-bg-lighter: #FBE4D8;
-    }
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--color-dark);
-      color: var(--color-bg-lighter);
-      scroll-behavior: smooth;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bansi Mehta - Business & Marketing Analyst</title>
+<style>
+  :root {
+    --background: #06141b;
+    --background-gradient: linear-gradient(135deg, #06141b 0%, #11212d 100%);
+    --card-bg: #253745;
+    --card-bg-hover: #3a4e63;
+    --text-color: #ccd0cf;
+    --accent-color: #ff52a0;
+    --header-color: #9ba8ab;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-gradient);
+    color: var(--text-color);
+  }
+
+  nav {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+  }
+
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--accent-color);
+  }
+
+  header {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+    font-weight: 900;
+  }
+
+  header h2 {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  section {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(255,82,160,0.3);
+  }
+
+  section:hover {
+    background-color: var(--card-bg-hover);
+  }
+
+  section h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+  }
+
+  p, ul {
+    line-height: 1.5;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+
+  .skill-bar {
+    height: 12px;
+    background: var(--background);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .skill-level {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 6px 0 0 6px;
+  }
+
+  footer {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--header-color);
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 480px) {
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: var(--color-primary);
-      display: flex;
-      justify-content: center;
-      padding: 1rem 0;
-      z-index: 1000;
+      gap: 1rem;
+      padding: 1rem;
     }
-    nav a {
-      color: var(--color-bg-lighter);
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
+    header h1 {
+      font-size: 2rem;
     }
-    nav a:hover {
-      color: var(--color-accent);
+    header h2 {
+      font-size: 1.2rem;
     }
-    section {
-      padding: 6rem 2rem 4rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .landing {
-      min-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-    .hook {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      font-family: 'Georgia', serif;
-      color: var(--color-bg-lighter);
-    }
-    .logos-carousel {
-      margin: 2rem 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      overflow-x: auto;
-      padding-bottom: 1rem;
-    }
-    .logos-carousel img {
-      height: 50px;
-      filter: brightness(0) invert(1);
-      transition: filter 0.3s ease;
-    }
-    .logos-carousel img:hover {
-      filter: brightness(0.7) invert(0.8);
-      cursor: pointer;
-    }
-    h2 {
-      font-weight: 700;
-      margin-top: 3rem;
-      border-bottom: 2px solid var(--color-accent);
-      padding-bottom: 0.5rem;
-      font-family: 'Georgia', serif;
-      color: var(--color-bg-light);
-    }
-    @media(max-width: 600px) {
-      nav a {
-        margin: 0 0.8rem;
-        font-size: 0.9rem;
-      }
-      .hook {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <a href="#landing">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#blog">Blog</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#updates">Updates</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <section id="landing" class="landing">
-    <div class="hook">Creative Data Analyst Turning Data into Stories</div>
-    <div class="logos-carousel" aria-label="Logos of Companies and Universities">
-      <!-- Replace src with actual logos -->
-      <img src="logo1.png" alt="Company 1 Logo" />
-      <img src="logo2.png" alt="University 1 Logo" />
-      <img src="logo3.png" alt="Company 2 Logo" />
-      <img src="logo4.png" alt="University 2 Logo" />
-    </div>
-    <p>Welcome to my portfolio — I design innovative data solutions that create real impact. Explore my projects, skills, and latest updates.</p>
-  </section>
+<nav>
+  <a href="#landing">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#blog">Blog</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Contact</a>
+</nav>
 
+<header id="landing">
+  <h1>Bansi Mehta</h1>
+  <h2>Business & Marketing Analyst</h2>
+</header>
+
+<main>
   <section id="about">
-    <h2>About Me</h2>
-    <p>Replace this with your friendly & professional summary.</p>
+    <h3>About Me</h3>
+    <p>Experienced analyst with a passion for transforming data into strategic business insights. Skilled in market research, data visualization, and decision support.</p>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
-    <p>Highlight key projects here.</p>
+    <h3>Projects</h3>
+    <p>Featured projects include market segmentation analysis, business intelligence dashboards, and customer behavior analytics.</p>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <p>List your main skills.</p>
+    <h3>Skills</h3>
+    <div>
+      <div>Data Analysis</div>
+      <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+      
+      <div>Market Research</div>
+      <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+      
+      <div>Excel & Power BI</div>
+      <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+      
+      <div>Python & SQL</div>
+      <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+    </div>
   </section>
 
   <section id="blog">
-    <h2>Blog</h2>
-    <p>Write links to your articles or notes.</p>
+    <h3>Blog</h3>
+    <p>Insights on data-driven business strategies and营销分析趋势.</p>
   </section>
 
   <section id="testimonials">
-    <h2>Testimonials</h2>
-    <p>Add quotes or references here.</p>
-  </section>
-
-  <section id="updates">
-    <h2>Updates</h2>
-    <p>Share news and recent activities.</p>
+    <h3>Testimonials</h3>
+    <p>"Bansi’s market analysis helped increase our customer base by 25% in 6 months." – Manager</p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com" style="color: var(--color-accent)">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--color-accent)">yourprofile</a></p>
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:bansi.email@example.com" style="color: var(--accent-color)">bansi.email@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/bansimehta13" style="color: var(--accent-color)" target="_blank">bansimehta13</a></p>
   </section>
+</main>
+
+<footer>
+  &copy; 2025 Bansi Mehta. All rights reserved.
+</footer>
+
 </body>
 </html>
