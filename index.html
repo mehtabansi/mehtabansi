@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name - Portfolio</title>
+  <style>
+    :root {
+      --color-dark: #190019;
+      --color-primary: #2B124C;
+      --color-secondary: #522B5B;
+      --color-accent: #854F6C;
+      --color-bg-light: #DFB6B2;
+      --color-bg-lighter: #FBE4D8;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-dark);
+      color: var(--color-bg-lighter);
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--color-primary);
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--color-bg-lighter);
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--color-accent);
+    }
+    section {
+      padding: 6rem 2rem 4rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .landing {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .hook {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-family: 'Georgia', serif;
+      color: var(--color-bg-lighter);
+    }
+    .logos-carousel {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+    .logos-carousel img {
+      height: 50px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s ease;
+    }
+    .logos-carousel img:hover {
+      filter: brightness(0.7) invert(0.8);
+      cursor: pointer;
+    }
+    h2 {
+      font-weight: 700;
+      margin-top: 3rem;
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: 0.5rem;
+      font-family: 'Georgia', serif;
+      color: var(--color-bg-light);
+    }
+    @media(max-width: 600px) {
+      nav a {
+        margin: 0 0.8rem;
+        font-size: 0.9rem;
+      }
+      .hook {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#landing">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#blog">Blog</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#updates">Updates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="landing" class="landing">
+    <div class="hook">Creative Data Analyst Turning Data into Stories</div>
+    <div class="logos-carousel" aria-label="Logos of Companies and Universities">
+      <!-- Replace src with actual logos -->
+      <img src="logo1.png" alt="Company 1 Logo" />
+      <img src="logo2.png" alt="University 1 Logo" />
+      <img src="logo3.png" alt="Company 2 Logo" />
+      <img src="logo4.png" alt="University 2 Logo" />
+    </div>
+    <p>Welcome to my portfolio — I design innovative data solutions that create real impact. Explore my projects, skills, and latest updates.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Replace this with your friendly & professional summary.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Highlight key projects here.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>List your main skills.</p>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>Write links to your articles or notes.</p>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <p>Add quotes or references here.</p>
+  </section>
+
+  <section id="updates">
+    <h2>Updates</h2>
+    <p>Share news and recent activities.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@example.com" style="color: var(--color-accent)">your.email@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--color-accent)">yourprofile</a></p>
+  </section>
+</body>
+</html>
