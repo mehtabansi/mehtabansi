@@ -3,227 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bansi Mehta - Business & Marketing Analyst</title>
-  <style>
-    :root {
-      --bg-darkest: #06141B;
-      --bg-dark: #11212D;
-      --card-bg: #253745;
-      --card-alt: #4A5C6A;
-      --text-secondary: #9BA8AB;
-      --text-light: #CCD0CF;
-      --radius: 22px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg-darkest);
-      color: var(--text-light);
-      scroll-behavior: smooth;
-      line-height: 1.6;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100vw;
-      background: var(--bg-dark);
-      box-shadow: 0 2px 12px rgba(6,20,27,0.18);
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      border-radius: 0 0 var(--radius) var(--radius);
-    }
-    nav a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.08rem;
-      padding: 0.5rem 1.2rem;
-      border-radius: var(--radius);
-      transition: background 0.22s, color 0.22s;
-    }
-    nav a:hover, nav a:focus, nav a.active {
-      background: var(--card-alt);
-      color: var(--text-light);
-      outline: none;
-    }
-    header {
-      max-width: 900px;
-      margin: 6rem auto 3rem auto;
-      padding: 0 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 900;
-      margin-bottom: 0.2rem;
-      color: var(--text-light);
-      letter-spacing: 2px;
-    }
-    header p {
-      color: var(--text-secondary);
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-    main {
-      max-width: 900px;
-      margin: 0 auto 3rem;
-      padding: 0 1.5rem;
-      display: grid;
-      gap: 3rem;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 700px) {
-      main { grid-template-columns: 1fr 1fr; }
-    }
-    section {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: 0 6px 22px rgba(37,55,69,0.14);
-      padding: 2rem 2.4rem;
-      transition: background 0.22s;
-      margin-bottom: 0.5rem;
-    }
-    section:hover {
-      background: var(--card-alt);
-    }
-    section h2 {
-      font-size: 1.2rem;
-      color: var(--text-secondary);
-      font-weight: 800;
-      border-bottom: 2px solid var(--text-light);
-      padding-bottom: 0.2rem;
-      margin-bottom: 1rem;
-      margin-top: 0;
-      letter-spacing: 1px;
-    }
-    section p, section ul { font-size: 1rem; color: var(--text-light); }
-    ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 0.8rem; }
-    .btn {
-      background: var(--text-secondary);
-      color: var(--bg-darkest);
-      font-weight: 700;
-      padding: 0.7rem 1.8rem;
-      border-radius: 18px;
-      margin-top: 1.2rem;
-      display: inline-block;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: background 0.2s, color 0.2s;
-      border: none;
-      outline: none;
-    }
-    .btn:hover, .btn:focus {
-      background: var(--text-light);
-      color: var(--bg-darkest);
-    }
-    .skill {
-      margin-top: 1rem;
-    }
-    .skill-label {
-      font-weight: 700;
-      color: var(--text-secondary);
-      margin-bottom: 0.22rem;
-    }
-    .skill-bar {
-      width: 100%;
-      height: 12px;
-      background: var(--card-alt);
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 0.6rem;
-    }
-    .skill-level {
-      height: 100%;
-      background: var(--text-secondary);
-      border-radius: 10px 0 0 10px;
-      transition: width 0.4s;
-    }
-    .contact-links a {
-      color: var(--text-secondary);
-      margin-right: 1.2rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .contact-links a:hover, .contact-links a:focus {
-      color: var(--text-light);
-      outline: none;
-    }
-    footer {
-      text-align: center;
-      color: var(--text-secondary);
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      max-width: 900px;
-      margin: 0 auto 1rem auto;
-    }
-  </style>
+  <title>Bansi Mehta • Business & Marketing Analyst</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#blog">Blog</a>
-  <a href="#contact">Contact</a>
-</nav>
-<header>
-  <h1>Bansi Mehta</h1>
-  <p>Business & Marketing Analyst | Turning Data into Strategic Insight</p>
-</header>
-<main>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>A business analytics professional passionate about transforming complex data into actionable stories for growth. Experienced in market research, dashboarding, and automation.</p>
-    <a class="btn" href="Resume_BansiMehta.pdf" target="_blank">Download Resume</a>
-  </section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Customer segmentation & personalization dashboards</li>
-      <li>Portfolio reporting automation pipelines</li>
-      <li>Market trend & competitive analysis dashboards</li>
-      <li>Data visualization for executive decision-making</li>
-    </ul>
-  </section>
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill">
-      <div class="skill-label">Data Analysis</div>
-      <div class="skill-bar"><div class="skill-level" style="width: 94%;"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label">Market Research & Visualization</div>
-      <div class="skill-bar"><div class="skill-level" style="width: 89%;"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label">SQL, Python</div>
-      <div class="skill-bar"><div class="skill-level" style="width: 86%;"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label">Power BI & Excel</div>
-      <div class="skill-bar"><div class="skill-level" style="width: 92%;"></div></div>
-    </div>
-  </section>
-  <section id="blog">
-    <h2>Blog</h2>
-    <p>Insights and thoughts on market analytics, marketing trends, and business intelligence.</p>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Connect via email or LinkedIn for projects or collaboration.</p>
-    <div class="contact-links">
-      <a href="mailto:bansi.email@example.com">bansi.email@example.com</a>
-      <a href="https://linkedin.com/in/bansimehta13" target="_blank">LinkedIn Profile</a>
-    </div>
-  </section>
-</main>
-<footer>
-  &copy; 2025 Bansi Mehta. All rights reserved.
-</footer>
-</body>
-</html>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <h1>Bansi Mehta</h1>
+    <p>Business & Marketing Analyst | Turning data into clear stories and decisions.</p>
+  </header>
+
+  <!-- Content -->
+  <main class="wrap grid-2">
+    <section class="card" id="about">
+      <h2>About</h2>
+      <p>Business analytics professional passionate about transforming complex data into actionable insights for growth. Experienced in market research, dashboarding, and automation.</p>
+      <a class="btn" href="Resume_BansiMehta.pdf" target="_blank" rel="noopener">Download Resume</a>
+    </section>
+
+    <section class="card" id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Customer segmentation & personalization dashboards</li>
+        <li>Reporting automation (SQL/Python) to cut manual work</li>
+        <li>Market trend & competitor analysis dashboards</li>
+        <li>Executive visualization for decision-making</li>
+      </ul>
+    </section>
+
+    <section class="card" id="skills">
+      <h2>Skills</h2>
+      <div class="skill">
+        <div class="label">Data Analysis</div>
+        <div class="bar"><div class="fill w90"></div></div>
+      </div>
+      <div class="skill">
+        <div class="label">Market Research & Visualization
