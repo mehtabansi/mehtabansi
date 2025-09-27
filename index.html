@@ -11,19 +11,20 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" role="navigation" aria-label="Main">
     <div class="container header-inner">
       <div class="brand">
-        <div class="portrait">
-          <img src="images/portrait.jpg" alt="Portrait of Bansi (placeholder)" />
+        <div class="portrait" aria-hidden="true">
+          <!-- placeholder headshot; replace with images/portrait.jpg -->
+          <img src="https://picsum.photos/300/300?random=1" alt="Portrait of Bansi (placeholder)" />
         </div>
         <div class="brand-text">
           <div class="name">Bansi Mehta</div>
-          <div class="role">Data scientist & creative analyst</div>
+          <div class="role">Data scientist • Creative analyst</div>
         </div>
       </div>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
@@ -34,7 +35,7 @@
 
   <main id="main">
     <!-- HERO -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" data-section>
       <div class="container hero-inner">
         <div class="hero-left">
           <h1 class="hero-title">I turn messy data into clear stories and beautiful insights</h1>
@@ -45,40 +46,38 @@
           </div>
 
           <div class="companies-rolling" aria-hidden="true">
-            <div class="companies-track">
-              <div class="company">Company A</div>
-              <div class="company">Company B</div>
-              <div class="company">Company C</div>
-              <div class="company">Company D</div>
-              <div class="company">Company E</div>
-              <!-- duplicate to make it smooth -->
-              <div class="company">Company A</div>
-              <div class="company">Company B</div>
-              <div class="company">Company C</div>
+            <div class="companies-track" data-track>
+              <div class="company">Google</div>
+              <div class="company">Nestlé</div>
+              <div class="company">Spotify</div>
+              <div class="company">Airbnb</div>
+              <div class="company">Nike</div>
+              <div class="company">Sephora</div>
+              <div class="company">Google</div>
+              <div class="company">Nestlé</div>
             </div>
           </div>
         </div>
 
         <div class="hero-right">
-          <!-- large visual card, curved -->
-          <div class="hero-card">
-            <img src="images/hero-visual.jpg" alt="Illustration representing data & creativity (placeholder)" />
+          <div class="hero-card" aria-hidden="true">
+            <img src="https://picsum.photos/600/900?random=2" alt="Illustration representing data & creativity (placeholder)" />
           </div>
         </div>
       </div>
 
       <!-- subtle curved divider -->
-      <div class="curve-down"></div>
+      <div class="curve-down" aria-hidden="true"></div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section about">
+    <section id="about" class="section about" data-section>
       <div class="container about-inner">
         <div class="bio">
           <h2 class="section-title">About me</h2>
           <p>I am a data scientist who loves storytelling. I blend visualization, product intuition, and statistical rigor to turn business questions into actionable outcomes. Beyond code, I enjoy photography, small experiments with color, and discovering patterns in everyday life.</p>
 
-          <div class="snippets">
+          <div class="snippets" aria-hidden="true">
             <div class="snippet">A bucket full of ideas, waiting to spill</div>
             <div class="snippet">Don’t be a stranger — let’s connect</div>
             <div class="snippet">I craft insights that people remember</div>
@@ -99,16 +98,16 @@
         </div>
       </div>
 
-      <div class="curve-up"></div>
+      <div class="curve-up" aria-hidden="true"></div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section projects">
+    <section id="projects" class="section projects" data-section>
       <div class="container">
         <h2 class="section-title">Selected Projects</h2>
         <div class="projects-grid">
-          <article class="project-card">
-            <img src="images/project-1.jpg" alt="Project 1 image (placeholder)">
+          <article class="project-card" tabindex="0">
+            <img src="https://picsum.photos/800/600?random=3" alt="Project 1 image (placeholder)">
             <div class="card-body">
               <h4>Project One</h4>
               <p>Product analytics + dashboard to increase retention by 18%.</p>
@@ -116,8 +115,8 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <img src="images/project-2.jpg" alt="Project 2 image (placeholder)">
+          <article class="project-card" tabindex="0">
+            <img src="https://picsum.photos/800/600?random=4" alt="Project 2 image (placeholder)">
             <div class="card-body">
               <h4>Project Two</h4>
               <p>Customer segmentation & targeting playbook for growth.</p>
@@ -125,8 +124,8 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <img src="images/project-3.jpg" alt="Project 3 image (placeholder)">
+          <article class="project-card" tabindex="0">
+            <img src="https://picsum.photos/800/600?random=5" alt="Project 3 image (placeholder)">
             <div class="card-body">
               <h4>Project Three</h4>
               <p>Data storytelling with interactive visuals and narrative flow.</p>
@@ -138,7 +137,7 @@
     </section>
 
     <!-- CONTACT / CTA -->
-    <section id="contact" class="section contact">
+    <section id="contact" class="section contact" data-section>
       <div class="container contact-inner">
         <h2 class="section-title">Let’s build something</h2>
         <p class="contact-sub">Have a data problem or an idea? I’d love to hear from you.</p>
@@ -147,11 +146,11 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
-      <div class="made">
+      <div class="made" aria-hidden="true">
         <span>Made with love</span>
-        <span class="heart">💜</span>
+        <span class="heart">💚</span>
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
@@ -161,6 +160,6 @@
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
