@@ -1,41 +1,166 @@
-<section class="card" id="projects">
-  <h2>Projects</h2>
-  <ul>
-    <li>Customer segmentation & personalization dashboards</li>
-    <li>Reporting automation (SQL/Python) to cut manual work</li>
-    <li>Market trend & competitor analysis dashboards</li>
-    <li>Executive visualization for decision-making</li>
-  </ul>
-</section>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bansi — Data + Design</title>
+  <meta name="description" content="Bansi — data scientist who blends analytics and creativity. Portfolio and projects." />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<section class="card" id="skills">
-  <h2>Skills</h2>
-  <div class="skill">
-    <div class="label">Data Analysis</div>
-    <div class="bar"><div class="fill w90"></div></div>
-  </div>
-  <div class="skill">
-    <div class="label">Market Research & Visualization</div>
-    <div class="bar"><div class="fill w88"></div></div>
-  </div>
-  <div class="skill">
-    <div class="label">SQL, Python</div>
-    <div class="bar"><div class="fill w86"></div></div>
-  </div>
-  <div class="skill">
-    <div class="label">Power BI & Excel</div>
-    <div class="bar"><div class="fill w92"></div></div>
-  </div>
-</section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="portrait">
+          <img src="images/portrait.jpg" alt="Portrait of Bansi (placeholder)" />
+        </div>
+        <div class="brand-text">
+          <div class="name">Bansi Mehta</div>
+          <div class="role">Data scientist & creative analyst</div>
+        </div>
+      </div>
 
-<section class="card" id="blog">
-  <h2>Blog</h2>
-  <p>Insights on analytics, marketing trends, and clear data storytelling.</p>
-</section>
+      <nav class="nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link cta">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="card" id="contact">
-  <h2>Contact</h2>
-  <p>Connect for projects or collaboration.</p>
-  <p><a class="btn" href="mailto:bansi.email@example.com">Email Me</a></p>
-  <p><a class="btn" href="https://linkedin.com/in/bansimehta13" target="_blank" rel="noopener">LinkedIn</a></p>
-</section>
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">I turn messy data into clear stories and beautiful insights</h1>
+          <p class="hero-sub">I combine product-thinking, visual storytelling, and rigorous analytics to help brands make smarter decisions.</p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View projects</a>
+            <a href="#contact" class="btn btn-outline">Get in touch</a>
+          </div>
+
+          <div class="companies-rolling" aria-hidden="true">
+            <div class="companies-track">
+              <div class="company">Company A</div>
+              <div class="company">Company B</div>
+              <div class="company">Company C</div>
+              <div class="company">Company D</div>
+              <div class="company">Company E</div>
+              <!-- duplicate to make it smooth -->
+              <div class="company">Company A</div>
+              <div class="company">Company B</div>
+              <div class="company">Company C</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- large visual card, curved -->
+          <div class="hero-card">
+            <img src="images/hero-visual.jpg" alt="Illustration representing data & creativity (placeholder)" />
+          </div>
+        </div>
+      </div>
+
+      <!-- subtle curved divider -->
+      <div class="curve-down"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container about-inner">
+        <div class="bio">
+          <h2 class="section-title">About me</h2>
+          <p>I am a data scientist who loves storytelling. I blend visualization, product intuition, and statistical rigor to turn business questions into actionable outcomes. Beyond code, I enjoy photography, small experiments with color, and discovering patterns in everyday life.</p>
+
+          <div class="snippets">
+            <div class="snippet">A bucket full of ideas, waiting to spill</div>
+            <div class="snippet">Don’t be a stranger — let’s connect</div>
+            <div class="snippet">I craft insights that people remember</div>
+          </div>
+        </div>
+
+        <div class="about-interests">
+          <h3 class="interests-title">Interests</h3>
+          <div class="interests-scroll" aria-label="Interests scroller">
+            <div class="interest">Data Viz</div>
+            <div class="interest">Product Analytics</div>
+            <div class="interest">Brand Strategy</div>
+            <div class="interest">Photography</div>
+            <div class="interest">UX Research</div>
+            <div class="interest">Cooking</div>
+            <div class="interest">Design Systems</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curve-up"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="images/project-1.jpg" alt="Project 1 image (placeholder)">
+            <div class="card-body">
+              <h4>Project One</h4>
+              <p>Product analytics + dashboard to increase retention by 18%.</p>
+              <a href="#" class="link">View case study</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/project-2.jpg" alt="Project 2 image (placeholder)">
+            <div class="card-body">
+              <h4>Project Two</h4>
+              <p>Customer segmentation & targeting playbook for growth.</p>
+              <a href="#" class="link">View case study</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/project-3.jpg" alt="Project 3 image (placeholder)">
+            <div class="card-body">
+              <h4>Project Three</h4>
+              <p>Data storytelling with interactive visuals and narrative flow.</p>
+              <a href="#" class="link">View case study</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section id="contact" class="section contact">
+      <div class="container contact-inner">
+        <h2 class="section-title">Let’s build something</h2>
+        <p class="contact-sub">Have a data problem or an idea? I’d love to hear from you.</p>
+        <a href="mailto:you@example.com" class="btn btn-primary">Email me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="made">
+        <span>Made with love</span>
+        <span class="heart">💜</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:you@example.com">Contact</a>
+        <a href="resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
